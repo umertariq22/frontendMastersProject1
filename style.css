@@ -1,0 +1,291 @@
+:root{
+    --color-primary-400:hsl(158, 36%, 37%);
+    --color-primary-300:hsl(30, 38%, 92%);
+
+    --color-nuetral-400:hsl(212, 21%, 14%);
+    --color-nuetral-300:hsl(228, 12%, 48%);
+    --color-nuetral-200:hsl(0, 0%, 100%);
+
+    --ff-primary:'Fraunces',
+        serif;
+    --ff-secondary:'Montserrat',
+        sans-serif;
+    --img-mobile:url("/image-product-mobile.jpg");
+    --img-desktop: url("/image-product-desktop.jpg");
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font:inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background: var(--color-primary-300);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media screen and (min-width:60em) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        background: var(--color-primary-300);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card {
+        width: 50%;
+        background: var(--color-nuetral-200);
+        border-radius: 10px;
+        display: flex;
+    }
+
+    .img {
+        width: 100%;
+        background-image: url(/image-product-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .product {
+        padding: 30px;
+    }
+
+    .category-text {
+        padding-top: 10px;
+        font-family: var(--ff-secondary);
+        font-size: 14px;
+        letter-spacing: 5px;
+        color: var(--color-nuetral-300);
+    }
+
+    .primary-heading {
+        padding-top: 30px;
+        font-family: var(--ff-primary);
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .description-text {
+        font-family: var(--ff-secondary);
+        padding-top: 30px;
+        font-size: 16px;
+        line-height: 1.6em;
+        color: var(--color-nuetral-300);
+    }
+
+    .price {
+        display: flex;
+        padding-top: 30px;
+    }
+
+    .final-price {
+        font-size: 32px;
+        color: var(--color-primary-400);
+        font-weight: 700;
+        font-family: var(--ff-primary);
+    }
+
+    .cutdown-price {
+        text-decoration: line-through;
+        font-size: 16px;
+        font-family: var(--ff-secondary);
+        font-weight: 500;
+        padding-left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cart-button {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        height: 60px;
+        background-color: var(--color-primary-400);
+        border: none;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-family: var(--ff-secondary);
+        color: var(--color-nuetral-200);
+        font-style: 14px;
+        font-weight: 700;
+    }
+
+    .cart-button img {
+        padding-right: 10px;
+    }
+}
+
+
+
+@media screen and (max-width:60em) {
+    .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 90%;
+            background: var(--color-nuetral-200);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img {
+            width: 100%;
+            height: 480px;
+            background-image: url(/image-product-mobile.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .column {
+            width: 100%;
+        }
+
+        .product {
+            padding: 30px;
+        }
+
+        .category-text {
+            padding-top: 10px;
+            font-family: var(--ff-secondary);
+            font-size: 14px;
+            letter-spacing: 5px;
+            color: var(--color-nuetral-300);
+        }
+
+        .primary-heading {
+            padding-top: 30px;
+            font-family: var(--ff-primary);
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        .description-text {
+            font-family: var(--ff-secondary);
+            padding-top: 30px;
+            font-size: 16px;
+            line-height: 1.6em;
+            color: var(--color-nuetral-300);
+        }
+
+        .price {
+            display: flex;
+            padding-top: 30px;
+        }
+
+        .final-price {
+            font-size: 32px;
+            color: var(--color-primary-400);
+            font-weight: 700;
+            font-family: var(--ff-primary);
+        }
+
+        .cutdown-price {
+            text-decoration: line-through;
+            font-size: 16px;
+            font-family: var(--ff-secondary);
+            font-weight: 500;
+            padding-left: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-button {
+            margin-top: 30px;
+            display: flex;
+            width: 100%;
+            height: 60px;
+            background-color: var(--color-primary-400);
+            border: none;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-family: var(--ff-secondary);
+            color: var(--color-nuetral-200);
+            font-style: 14px;
+            font-weight: 700;
+        }
+
+        .cart-button img {
+            padding-right: 10px;
+        }
+}
